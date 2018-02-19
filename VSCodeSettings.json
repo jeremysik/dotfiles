@@ -1,0 +1,10 @@
+{
+    "editor.fontSize": 14,
+    "extensions.ignoreRecommendations": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "window.zoomLevel": 0,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "window.openFoldersInNewWindow": "on",
+    "editor.detectIndentation": false
+}
