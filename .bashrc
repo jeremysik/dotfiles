@@ -7,5 +7,8 @@ fi
 
 # User specific aliases and functions
 
+# Load common
+. ~/.common_bash
+
 # Run appropriate dotfiles
 . ~/.bash_prompt
