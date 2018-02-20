@@ -1,2 +1,9 @@
 # Load 'em all up!
 . ~/.aliases
+. ~/.git-completion
+
+# Turn on autocomplete for git alias
+__git_complete gch _git_checkout
+__git_complete g _git
+__git_complete gm _git_merge
+__git_complete gpl _git_pull
