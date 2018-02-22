@@ -3,3 +3,8 @@
 # Set keyboard repeat rate and delay
 gsettings set org.gnome.desktop.peripherals.keyboard delay 250
 gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 8
+
+# If tmux is installed, update it's settings
+if hash tmux 2>/dev/null; then
+    tmux source-file ~/.tmux.conf
+fi
