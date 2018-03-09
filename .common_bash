@@ -2,6 +2,11 @@
 . ~/.aliases
 . ~/.git-completion
 
+# Load extra file if it exists
+if [ -f ~/.extra ]; then
+   . ~/.extra
+fi
+
 # Turn on autocomplete for git alias
 __git_complete gch _git_checkout
 __git_complete g _git
