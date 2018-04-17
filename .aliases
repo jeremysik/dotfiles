@@ -72,3 +72,6 @@ alias findfoldersover1000='sudo du -h / | grep ^[0-9.]*G | sort -rn'
 
 # Will get all commit messages for a repo in the last day, format them into 1 liners and copy it to clipboard
 alias gitstandup="git log --since=\"\$(yesterworkday)\" --author=\"\$(git config user.name)\" --no-merges --pretty=format:'%s' --abbrev-commit --branches | awk '\$0=\"> - \"\$0' | pbcopy"
+
+# Battery Status
+alias batterystatus="cat /sys/power/mem_sleep; date; upower -i /org/freedesktop/UPower/devices/battery_BAT0;"
