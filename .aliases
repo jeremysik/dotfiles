@@ -75,3 +75,7 @@ alias gitstandup="git log --since=\"\$(yesterworkday)\" --author=\"\$(git config
 
 # Battery Status
 alias batterystatus="cat /sys/power/mem_sleep; date; upower -i /org/freedesktop/UPower/devices/battery_BAT0;"
+
+# eGPU Tools
+alias rescanpci="echo 1 | sudo tee /sys/bus/pci/rescan > /dev/null"
+alias testegpu="primusrun glxspheres64"
