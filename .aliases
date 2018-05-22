@@ -79,3 +79,5 @@ alias batterystatus="cat /sys/power/mem_sleep; date; upower -i /org/freedesktop/
 # eGPU Tools
 alias rescanpci="echo 1 | sudo tee /sys/bus/pci/rescan > /dev/null"
 alias testegpu="primusrun glxspheres64"
+alias bumblestatus="systemctl status bumblebeed.service"
+alias bumblestart="systemctl start bumblebeed.service"
