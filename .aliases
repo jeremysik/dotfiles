@@ -77,7 +77,8 @@ alias gitstandup="git log --since=\"\$(yesterworkday)\" --author=\"\$(git config
 alias batterystatus="cat /sys/power/mem_sleep; date; upower -i /org/freedesktop/UPower/devices/battery_BAT0;"
 
 # eGPU Tools
-alias rescanpci="echo 1 | sudo tee /sys/bus/pci/rescan > /dev/null"
+alias scanpci="echo 1 | sudo tee /sys/bus/pci/rescan > /dev/null"
+alias disconnectthunderboltcontroller="echo 1 | sudo tee /sys/bus/pci/devices/0000\:00\:1d.0/remove > /dev/null"
 alias testegpu="primusrun glxspheres64"
 alias bumblestatus="systemctl status bumblebeed.service"
 alias bumblestart="systemctl start bumblebeed.service"
