@@ -6,5 +6,6 @@
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
     "window.openFoldersInNewWindow": "on",
-    "editor.detectIndentation": false
+    "editor.detectIndentation": false,
+    "workbench.editor.enablePreview": false
 }
