@@ -79,3 +79,7 @@ alias batterystatus="cat /sys/power/mem_sleep; date; upower -i /org/freedesktop/
 # eGPU Tools
 alias bumblestatus="systemctl status bumblebeed.service"
 alias bumblestart="systemctl start bumblebeed.service"
+
+# Docker Tools
+alias dockercleancontainers="docker ps -aq --no-trunc -f status=exited | xargs docker rm"
+alias dockercleanimages="docker images -q --filter dangling=true | xargs docker rmi"
