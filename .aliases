@@ -18,7 +18,15 @@ alias gs="git status"
 alias gh="git stash"
 alias ghp="git stash pop"
 alias gm="gitmerge"
-alias gitclean="git branch --merged master | grep -v -e 'master' -e '\*' | xargs -n 1 git branch -d && git remote prune origin"
+
+function gitclean {
+    branch="master"
+    if [ ! -z $1 ]; then
+        branch=$1
+    fi
+    git branch --merged $branch | grep -v -e 'master' -e '\*' -e $branch | xargs -n 1 git branch -d && git remote prune origin
+}
+export -f gitclean
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
