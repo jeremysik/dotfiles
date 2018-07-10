@@ -91,3 +91,11 @@ alias bumblestart="systemctl start bumblebeed.service"
 # Docker Tools
 alias dockercleancontainers="docker ps -aq --no-trunc -f status=exited | xargs docker rm"
 alias dockercleanimages="docker images -q --filter dangling=true | xargs docker rmi"
+
+# Grub
+function reboottowindows {
+    WINDOWS_TITLE=`sudo grep -i 'windows' /boot/efi/EFI/fedora/grub.cfg|cut -d"'" -f2`
+    sudo grub2-reboot "$WINDOWS_TITLE"
+    sudo reboot
+}
+export -f reboottowindows
